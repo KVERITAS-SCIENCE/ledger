@@ -6,7 +6,7 @@ Signed snapshots of the [K-Veritas](https://kveritas.org) transparency ledger, k
 
 - `checkpoint.json`: the newest checkpoint. Entry number, entry hash, time, server signature.
 - `checkpoints.jsonl`: every checkpoint recorded, oldest first.
-- `public_key.pem`: the K-Veritas server key the signatures verify against.
+- `trusted_keys.json`: the K-Veritas signing keys. `active` signs now; `next` keys are published before they are used; a `retired` key counts for checkpoints up to its `until` time.
 
 Recorded hourly by a GitHub Action, only when the ledger has grown.
 
